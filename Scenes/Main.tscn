@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/MyTilemap.cs" type="Script" id=1]
+
+[node name="Main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="MyTilemap" type="Node2D" parent="."]
+position = Vector2( 34.7058, 98.7782 )
+script = ExtResource( 1 )
+evenColor = Color( 0.486275, 0.298039, 0.243137, 1 )
+oddColor = Color( 0.317647, 0.164706, 0.164706, 1 )
