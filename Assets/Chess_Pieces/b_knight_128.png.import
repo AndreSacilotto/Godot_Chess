@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/w_pawn_png_shadow_128px.png-69b4e8e9ead4d7a5085968119e8933eb.stex"
+path="res://.import/b_knight_128.png-e73309aa46d5b8ee20ea6f08259f7444.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/w_pawn_png_shadow_128px.png"
-dest_files=[ "res://.import/w_pawn_png_shadow_128px.png-69b4e8e9ead4d7a5085968119e8933eb.stex" ]
+source_file="res://Assets/Chess_Pieces/b_knight_128.png"
+dest_files=[ "res://.import/b_knight_128.png-e73309aa46d5b8ee20ea6f08259f7444.stex" ]
 
 [params]
 

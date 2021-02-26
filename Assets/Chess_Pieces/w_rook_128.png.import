@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/b_rook_png_shadow_128px.png-23b72fafe07a5373b4e6d91d0cd6e216.stex"
+path="res://.import/w_rook_128.png-bd753ceb8993e0b96729cb27daa63a38.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/b_rook_png_shadow_128px.png"
-dest_files=[ "res://.import/b_rook_png_shadow_128px.png-23b72fafe07a5373b4e6d91d0cd6e216.stex" ]
+source_file="res://Assets/Chess_Pieces/w_rook_128.png"
+dest_files=[ "res://.import/w_rook_128.png-bd753ceb8993e0b96729cb27daa63a38.stex" ]
 
 [params]
 
