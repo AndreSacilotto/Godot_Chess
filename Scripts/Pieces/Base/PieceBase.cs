@@ -4,18 +4,25 @@ using static Godot.GD;
 
 public abstract class PieceBase : Sprite
 {
-	[Export(PropertyHint.Enum, "White, Black")] 
-	private int teamColor = 0;
+	public Vector2Int IndexPosition { get; private set; }
 
-	public bool IsWhiteTeam() => teamColor == (int)TeamColor.white;
+	public bool IsDead { get; set; } = false;
+
+	[Export] public bool IsWhiteTeam { get; set; } 
+
+	public void SetAll(int x, int y, bool IsWhiteTeam){
+		IndexPosition = new Vector2Int(x, y);
+		this.IsWhiteTeam = IsWhiteTeam;
+	}
 
 	protected static Texture LoadPieceTexture(char pieceColor, string pieceName) => 
 		Load($"res://Assets/Chess_Pieces/{pieceColor}_{pieceName}_128.png") as Texture;	
-			
-	protected Texture WhiteBlackTexture(Texture white, Texture black) => IsWhiteTeam() ? white : black;
 
-	public enum TeamColor{
-		white = 0,
-		black
+	public void SetIndexDeadPosition(){
+		IndexPosition = new Vector2Int(-1, -1);
 	}
+			
+	protected Texture WhiteBlackTexture(Texture whiteTex, Texture blackTex) => IsWhiteTeam ? whiteTex : blackTex;
+
+	public abstract Vector2Int[] GetArea(PieceBase[,] board);
 }

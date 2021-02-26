@@ -4,6 +4,11 @@ using static Godot.GD;
 
 public abstract class Piece<T> : PieceBase
 {
-	public static Texture whiteTexture;
-	public static Texture blackTexture;
+	protected static Texture whiteTexture;
+	protected static Texture blackTexture;
+
+	public override void _EnterTree(){
+		Texture = WhiteBlackTexture(whiteTexture, blackTexture); 
+		Scale = new Vector2(.5f, .5f);
+	}
 }

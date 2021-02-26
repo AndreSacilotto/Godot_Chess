@@ -1,28 +1,24 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/BoardTileMap.cs" type="Script" id=1]
 [ext_resource path="res://Scripts/Pieces/Bishop.cs" type="Script" id=2]
-[ext_resource path="res://Scripts/Pieces/Rook.cs" type="Script" id=3]
 
 [node name="Main" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+drag_margin_left = 0.0
+drag_margin_top = 0.0
+drag_margin_right = 0.0
+drag_margin_bottom = 0.0
 
 [node name="MyTilemap" type="Node2D" parent="."]
-position = PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+position = Vector2( -256, -256 )
 script = ExtResource( 1 )
-oddColor = Color( 0.317647, 0.164706, 0.164706, 1 )
-tileSize = 64
 evenColor = Color( 0.486275, 0.298039, 0.243137, 1 )
+oddColor = Color( 0.317647, 0.164706, 0.164706, 1 )
 
-[node name="piece1" type="Sprite" parent="."]
-position = Vector2( -226.583, 217.486 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Pieces" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="."]
 script = ExtResource( 2 )
-
-[node name="piece2" type="Sprite" parent="."]
-position = Vector2( -121.021, 215.899 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 3 )
-teamColor = 1

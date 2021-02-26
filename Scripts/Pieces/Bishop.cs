@@ -9,9 +9,8 @@ public class Bishop : Piece<Bishop>
 		blackTexture = LoadPieceTexture('b', "bishop");
 	}
 
-	public override void _Ready()
-	{
-		Print(IsWhiteTeam());
-		Texture = IsWhiteTeam() ? whiteTexture : blackTexture;
+	public override Vector2Int[] GetArea(PieceBase[,] board){
+		return null;
 	}
+
 }
